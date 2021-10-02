@@ -1,0 +1,114 @@
+@import "../../scss/variables";
+
+.pageTitle {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 2.25rem;
+  text-align: center;
+  color: $color_black;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  @media (min-width: 640px) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  width: 100%;
+  font-size: larger;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    margin-top: 2.5rem;
+  }
+}
+
+%contentBox {
+  background-color: $color_white;
+  border-color: $color_black;
+  border-width: 2px;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.linesContainer {
+  border-color: $color_black;
+  border-bottom-width: 2px;
+  padding-bottom: 0.5rem;
+  background-color: $color_grey_fa;
+  display: flex;
+  background-color: #fafafa;
+}
+
+.innerContent {
+  padding: 24px;
+}
+
+.getStarted {
+  border: 2px solid #000000;
+  padding: 24px 0px;
+  margin-top: 24px;
+  width: 100%;
+  background: #e3e3e3;
+  font-size: x-large;
+}
+
+.proposalBody {
+  @extend %contentBox;
+  flex-grow: 2;
+}
+.votingBody {
+  @extend %contentBox;
+  height: fit-content;
+  margin-right: 24px;
+  @media (max-width: 640px) {
+    margin-right: 0px;
+  }
+}
+
+.wojakBalance {
+  padding: 12px;
+  border: 2px solid #000000;
+  h3 {
+    font-size: 22px;
+    text-decoration: underline;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  span {
+    font-size: x-large;
+  }
+}
+
+.proposal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0px;
+  h3 {
+    font-size: x-large;
+  }
+  div {
+    border: 2px solid #000000;
+    padding: 4px 8px;
+    height: fit-content;
+  }
+  button {
+    border: 2px solid #000000;
+    padding: 16px 95px;
+    background: #e3e3e3;
+  }
+}
+
+.inverted {
+  color: white;
+  background: black;
+}
